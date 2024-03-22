@@ -1,0 +1,32 @@
+@mixin left-right {
+  @keyframes left-right {
+    0% {
+      transform: translateX(-300px);
+    }
+
+    50% {
+      transform: translateX(-150px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@mixin hide-seek {
+
+  @keyframes hide-seek {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

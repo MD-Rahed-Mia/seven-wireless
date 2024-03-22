@@ -1,0 +1,161 @@
+@import "./../../style/responsive";
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  min-height: 30vh;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 2rem auto;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
+
+.email-subscription {
+  padding: 2rem;
+  border-right: 1px solid lightgray;
+
+  form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  input {
+    padding: 6px;
+    border: 1px solid lightgray;
+    outline: none;
+  }
+
+  button {
+    padding: 6px 1.5rem;
+    border: none;
+    outline: none;
+    background-color: var(--primary-btn);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 13px;
+    opacity: 0.6;
+  }
+}
+
+.footer-menu {
+  padding: 2rem;
+  border-right: 1px solid lightgray;
+
+  ul {
+    list-style: none;
+    font-size: 14px;
+
+    li {
+      padding: 5px 0;
+      font-weight: 400;
+      cursor: pointer;
+      transition: all 300ms;
+    }
+
+    li:hover {
+      color: var(--primary-btn);
+    }
+  }
+}
+
+.footer-social-media {
+  padding: 2rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+  font-size: 13px;
+
+  div {
+    opacity: 0.6;
+  }
+
+  a {
+    color: #111;
+    text-decoration: none;
+    opacity: 0.6;
+    margin-right: 10px;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+}
+
+@include small {
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 30vh;
+    width: 90%;
+
+    button {
+      padding: 6px;
+      border: none;
+      width: 100px;
+      outline: none;
+      background-color: var(--primary-btn);
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
+
+
+  .email-subscription {
+    padding: 1rem;
+    border-right: 1px solid lightgray;
+
+    form {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+    }
+  }
+
+  .footer-menu {
+    padding: 2rem;
+    border-right: 1px solid lightgray;
+
+    ul {
+      li {
+        padding: 5px 0;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 300ms;
+        text-align: center;
+      }
+
+      li:hover {
+        color: var(--primary-btn);
+      }
+    }
+  }
+}

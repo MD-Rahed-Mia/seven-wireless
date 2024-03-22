@@ -1,0 +1,17 @@
+@import './responsive';
+
+.shop-page {
+  width: 100%;
+  min-height: 80vh;
+}
+
+.shop-product-cards {
+  width: 70%;
+  margin: 150px auto;
+}
+
+@include small {
+  .shop-product-cards {
+    width: 90%;
+  }
+}

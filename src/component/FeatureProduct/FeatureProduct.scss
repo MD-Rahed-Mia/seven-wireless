@@ -1,0 +1,164 @@
+@import './../../style/responsive';
+
+
+
+.feature-product {
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.feature-product-top {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 500px 600px;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 1.5rem 0;
+}
+
+.feature-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.feature-product-details {
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+
+  ul {
+    margin-top: 1.5rem;
+    list-style-position: inside;
+
+    li {
+      font-size: 14px;
+      padding: 6px 0;
+      opacity: 0.6;
+      text-transform: capitalize;
+    }
+  }
+
+  button {
+    padding: 10px 2.5rem;
+    margin-top: 2rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: var(--primary-btn);
+    color: white;
+    cursor: pointer;
+    transition: all 300ms;
+    font-size: 1.1rem;
+  }
+
+  button:hover {
+    background: var(--primary-btn-hover);
+  }
+}
+
+.feature-product-bottom {
+  display: flex;
+  gap: 2rem;
+  width: 70%;
+  margin: 2rem auto;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 4);
+    height: 120px;
+
+    span {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  }
+
+  .feature-pr-bt-icon {
+    opacity: 0.6;
+    font-size: 3rem;
+  }
+}
+
+//responsiveness for mobile devices less than 520px
+@include small {
+  .feature-product-top {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+  }
+
+  .feature-img {
+    img {
+      width: 70%;
+    }
+  }
+
+  .feature-product-bottom {
+    margin: 1rem auto;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+
+
+
+    .feature-pr-bt-icon {
+      opacity: 0.6;
+      font-size: 2rem;
+    }
+  }
+
+  .feature-product-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    margin: 2rem auto;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% / 4);
+      height: 120px;
+
+      span {
+        font-size: 13px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .feature-pr-bt-icon {
+        opacity: 0.6;
+        font-size: 2rem;
+      }
+    }
+
+
+  }
+
+}

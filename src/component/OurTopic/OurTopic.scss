@@ -1,0 +1,65 @@
+@import './../../style/responsive';
+
+
+.our-topic {
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.topic-card {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  margin: 2.5rem 0;
+
+  .topic-card-desc {
+    color: white;
+    margin-left: 10%;
+
+    h1 {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-top: 1rem;
+      width: 50%;
+
+    }
+  }
+
+
+}
+
+@include small {
+
+  .our-topic {
+    width: 90%;
+  }
+
+  .topic-card {
+    width: 100%;
+    min-height: 300px;
+
+    .topic-card-desc {
+      color: white;
+      margin-left: 10%;
+
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin-top: 12px;
+        width: 90%;
+
+      }
+    }
+
+
+  }
+
+}
