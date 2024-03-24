@@ -5,8 +5,8 @@ import OurTopic from "../component/OurTopic/OurTropic";
 import OurProduct from "../component/OurProduct/OurProduct";
 import FeatureTech from "../component/FeatureTech/FeatureTech";
 import BottomExperience from "../component/BottomExperience/BottomExperience";
-import Layout from "../Layout/Layout"
-
+import Layout from "../Layout/Layout";
+import Animate from "../component/Animate/Animate";
 
 export default function Home() {
   return (

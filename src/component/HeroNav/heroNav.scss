@@ -40,7 +40,15 @@
 
     li {
       cursor: pointer;
+
+      a {
+        color: white;
+      }
     }
+  }
+
+  .cart-icon {
+    font-size: 1.5rem;
   }
 }
 

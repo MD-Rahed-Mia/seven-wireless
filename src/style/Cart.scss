@@ -1,5 +1,8 @@
 .cart {
   width: 1200px;
-  min-height: 10vh;
+  min-height: 50vh;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  gap: 2rem;
 }

@@ -2,6 +2,8 @@ import React from "react";
 import "./heroNav.scss";
 import { Link } from "react-router-dom";
 
+import { FaShoppingCart } from "react-icons/fa";
+
 export default function Navbar() {
   return (
     <div className="nav-top">
@@ -12,13 +14,19 @@ export default function Navbar() {
       </div>
       <div className="menu">
         <ul>
-          <li><Link to={"/cart"}>Cart</Link></li>
+          <li className="cart-icon">
+            <Link to={"/cart"}>
+              <FaShoppingCart />
+            </Link>
+          </li>
           <li>
             <Link to={"/shop"}>Shop</Link>
           </li>
           <li>About</li>
           <li>contact</li>
-          <li>news</li>
+          <li>
+            <Link to={"/news"}>News</Link>
+          </li>
         </ul>
       </div>
     </div>

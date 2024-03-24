@@ -1,0 +1,42 @@
+.anim_left {
+  animation: anim_left 1s linear;
+}
+
+@keyframes anim_left {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(-25%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.anim_right {
+  animation: anim-right 1s linear;
+}
+
+@keyframes anim-right {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(25%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
