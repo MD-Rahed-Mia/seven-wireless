@@ -100,6 +100,51 @@
   }
 }
 
+@include md {
+  .feature-product-top {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0;
+  }
+
+  .feature-img {
+    img {
+      width: 70%;
+    }
+  }
+
+
+  .feature-product-bottom {
+    width: 100%;
+    margin: 2rem auto;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: calc(100% / 4);
+      height: 120px;
+
+      span {
+        font-size: 13px;
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .feature-pr-bt-icon {
+        font-size: 3rem;
+      }
+    }
+
+
+  }
+
+}
+
 //responsiveness for mobile devices less than 520px
 @include small {
   .feature-product-top {

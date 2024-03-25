@@ -10,11 +10,20 @@
   gap: 2rem;
 }
 
+//responsive for medium devices less than 1200px
+@include md {
+  .cart {
+    width: 95%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
 
 //responsive for small devices
-
 @include small {
-
   .cart {
     width: 95%;
     min-height: 50vh;

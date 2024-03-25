@@ -33,6 +33,35 @@
 
 }
 
+//responsive less than 1200px
+@include md {
+  .our-topic {
+    width: 85%;
+  }
+
+  .topic-card {
+    width: 100%;
+    min-height: 300px;
+
+    .topic-card-desc {
+      color: white;
+      margin-left: 10%;
+
+      h1 {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin-top: 12px;
+        width: 90%;
+
+      }
+    }
+  }
+
+}
+
 @include small {
 
   .our-topic {

@@ -113,10 +113,10 @@
   }
 }
 
-@include small {
+@include md {
   .footer-top {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     min-height: 30vh;
     width: 90%;
 
@@ -161,5 +161,14 @@
         color: var(--primary-btn);
       }
     }
+  }
+}
+
+//responsive for small devices less than 520px
+@include small {
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr;
+
   }
 }

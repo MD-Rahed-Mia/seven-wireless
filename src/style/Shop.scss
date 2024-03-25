@@ -10,6 +10,13 @@
   margin: 150px auto;
 }
 
+@include md {
+
+  .shop-product-cards {
+      width: 90%;
+    }
+}
+
 @include small {
   .shop-product-cards {
     width: 90%;
