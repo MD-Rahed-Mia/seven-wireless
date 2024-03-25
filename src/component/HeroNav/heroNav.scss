@@ -131,4 +131,29 @@
       }
     }
   }
+
+  nav-bottom-desc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6;
+    color: white;
+    margin-top: 3rem;
+
+    animation: hide-seek 500ms linear;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1rem;
+    }
+
+    .hero-icon {
+      font-size: 2rem;
+      font-weight: lighter;
+      opacity: 0.8;
+    }
+  }
 }
