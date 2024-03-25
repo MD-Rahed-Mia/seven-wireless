@@ -1,5 +1,6 @@
 import React from "react";
 import Heroimg from "./../../assets/image/heroimg.jpg";
+import HeroImg2 from './../../assets/image/heroimg_2.jpg';
 import "./heroNav.scss";
 
 import { SlMusicTone } from "react-icons/sl";
@@ -11,7 +12,7 @@ export default function HeroNav() {
   return (
     <div
       style={{
-        backgroundImage: `url(${Heroimg})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.2)), url(${HeroImg2})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
