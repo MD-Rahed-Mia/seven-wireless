@@ -69,22 +69,26 @@
   }
 
   .topic-card {
-    width: 100%;
-    min-height: 300px;
+    width: 90%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin: 2rem auto;
 
     .topic-card-desc {
       color: white;
       margin-left: 10%;
 
       h1 {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
         font-weight: 600;
       }
 
       p {
         margin-top: 12px;
-        width: 90%;
-
+        width: 100%;
+        font-size: 13px;
       }
     }
 

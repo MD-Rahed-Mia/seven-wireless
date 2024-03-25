@@ -181,6 +181,8 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid lightgray;
+    max-width: 70%;
+    margin: 2rem auto;
 
     .product-card-img {
       display: flex;
@@ -188,7 +190,7 @@
       justify-content: center;
 
       img {
-        width: 60%;
+        width: 100%;
         border-radius: 15px;
       }
     }
