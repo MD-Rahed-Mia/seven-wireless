@@ -1,4 +1,10 @@
+@import './responsive';
+
 .news {
   width: 70%;
   margin: 2rem auto;
+}
+
+@include md {
+  width: 90%;
 }
