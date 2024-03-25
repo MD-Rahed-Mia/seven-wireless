@@ -181,7 +181,7 @@
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid lightgray;
-    max-width: 70%;
+    max-width: 85%;
     margin: 2rem auto;
 
     .product-card-img {
@@ -192,6 +192,18 @@
       img {
         width: 100%;
         border-radius: 15px;
+      }
+    }
+
+    .product-card-tool {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      .product-card-quantity {
+        width: auto;
+        margin: 0 auto;
       }
     }
   }

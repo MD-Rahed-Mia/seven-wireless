@@ -169,6 +169,54 @@
   .footer-top {
     display: grid;
     grid-template-columns: 1fr;
+    min-height: 30vh;
+    width: 80%;
 
+
+    button {
+      padding: 6px;
+      border: none;
+      width: 100px;
+      outline: none;
+      background-color: var(--primary-btn);
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
+
+
+  .email-subscription {
+    padding: 1rem;
+    border-right: 1px solid lightgray;
+
+    form {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0;
+
+      input {
+        max-width: 160px;
+      }
+    }
+  }
+
+  .footer-menu {
+    padding: 0rem;
+    border-right: 1px solid lightgray;
+
+    ul {
+      li {
+        padding: 5px 0;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 300ms;
+        text-align: center;
+      }
+
+      li:hover {
+        color: var(--primary-btn);
+      }
+    }
   }
 }
