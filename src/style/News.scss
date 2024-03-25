@@ -5,6 +5,9 @@
   margin: 2rem auto;
 }
 
+
 @include md {
-  width: 90%;
+  .news {
+    width: 90%;
+  }
 }
