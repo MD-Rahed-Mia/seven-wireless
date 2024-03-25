@@ -144,6 +144,7 @@
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid lightgray;
 
     .product-card-img {
       display: flex;
@@ -151,7 +152,7 @@
       justify-content: center;
 
       img {
-        width: 80%;
+        width: 60%;
         border-radius: 15px;
       }
     }

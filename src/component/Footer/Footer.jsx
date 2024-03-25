@@ -4,6 +4,7 @@ import "./Footer.scss";
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -22,11 +23,10 @@ export default function Footer() {
         </div>
         <div className="footer-menu">
           <ul>
-            <li>about us</li>
-            <li>shop</li>
-            <li>News</li>
-            <li>Contact</li>
-            <li>404 error page</li>
+            <li><Link to="/about">about</Link></li>
+            <li><Link to="/shop">shop</Link></li>
+            <li><Link to="/news">news</Link></li>
+            <li><Link to="/contact">contact</Link></li>
           </ul>
         </div>
         <div className="footer-social-media">
