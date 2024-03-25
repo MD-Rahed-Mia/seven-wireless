@@ -23,7 +23,9 @@ export default function Navbar() {
             <Link to={"/shop"}>Shop</Link>
           </li>
           <li>About</li>
-          <li>contact</li>
+          <li>
+            <Link to={"/contact"}>Contact</Link>
+          </li>
           <li>
             <Link to={"/news"}>News</Link>
           </li>

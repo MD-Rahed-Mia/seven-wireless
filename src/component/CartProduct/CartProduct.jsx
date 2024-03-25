@@ -6,46 +6,39 @@ import { RiDeleteBack2Line } from "react-icons/ri";
 export default function CartProduct() {
   return (
     <div className='cart-product-info'>
-      <table>
-        <thead>
-          <tr>
-            <td style={{ width: "50%" }}>Product</td>
-            <td style={{ width: "10%" }}>Price</td>
-            <td style={{ width: "15%" }}>Quantity</td>
-            <td style={{ width: "15%" }}>Subtotal</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td className='cart-pr-information'>
-              <RiDeleteBack2Line className='cart-pr-delete' />
-              <img src="https://the7.io/elementor-product/wp-content/uploads/sites/111/2023/12/Mask-group-10.jpg" alt="" />
-              <p>Et de promene sur femme trésor pleure-t-elle. Encadré.</p>
-            </td>
-            <td>$390</td>
-            <td className='cart-pr-quantity'>
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
-            </td>
-            <td>$390</td>
-          </tr>
-          <tr>
-            <td className='cart-pr-information'>
-              <RiDeleteBack2Line className='cart-pr-delete' />
-              <img src="https://the7.io/elementor-product/wp-content/uploads/sites/111/2023/12/Mask-group-10.jpg" alt="" />
-              <p>Et de promene sur femme trésor pleure-t-elle. Encadré.</p>
-            </td>
-            <td>$390</td>
-            <td className='cart-pr-quantity'>
-              <button>-</button>
-              <p>1</p>
-              <button>+</button>
-            </td>
-            <td>$390</td>
-          </tr>
-        </tbody>
-      </table>
+
+
+      <div className="cart-product-item">
+        <table>
+          <thead>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td className='cart-product-details'>
+                <div className='remove-cart-product'><RiDeleteBack2Line /></div>
+                <div>
+
+                  <img src="https://the7.io/elementor-product/wp-content/uploads/sites/111/2023/12/Mask-group-1-1-400x400.jpg" alt="" />
+                </div>
+                <div>
+                  <p>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+              </td>
+              <td className='cart-table-price'>$305</td>
+              <td className='cart-table-quantity'>
+                <button>-</button>
+                <p>1</p>
+                <button>+</button>
+              </td>
+              <td>$305</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <div className="cart-coupon-item">
         <div>

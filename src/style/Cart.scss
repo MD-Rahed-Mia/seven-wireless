@@ -1,8 +1,26 @@
+@import './responsive';
+
+
 .cart {
-  width: 1200px;
+  width: 80%;
   min-height: 50vh;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 65% 35%;
   gap: 2rem;
+}
+
+
+//responsive for small devices
+
+@include small {
+
+  .cart {
+    width: 95%;
+    min-height: 50vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

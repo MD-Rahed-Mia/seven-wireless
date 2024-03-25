@@ -1,75 +1,76 @@
+@import "./../../style/responsive";
+
 .cart-product-info {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.cart-product-item {
+  width: 100%;
+  margin-top: 3rem;
 
   table {
     width: 100%;
     border-collapse: collapse;
   }
 
-  thead {
-    font-size: 1.2rem;
-    opacity: 0.6;
-  }
-
-  tr,
-  td {
-    text-align: center;
+  th {
+    border-bottom: 1px solid lightgray;
     padding: 10px;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.259);
-    min-height: 80px;
   }
 
-  .cart-pr-information {
+  td {
+    height: 100px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
 
+    img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .cart-product-details {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.8rem;
+    gap: 1rem;
+    padding: 10px;
 
-    img {
-      max-width: 20%;
+    .remove-cart-product {
+      font-size: 1.5rem;
+      opacity: 0.6;
+      cursor: pointer;
     }
 
     p {
       font-size: 14px;
       opacity: 0.6;
     }
-
-    .cart-pr-delete {
-      font-size: 1.2rem;
-      opacity: 0.6;
-      cursor: pointer;
-    }
-
   }
+}
 
-  .cart-pr-quantity {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.cart-table-price {
+  text-align: center;
+}
+
+.cart-table-quantity {
+  text-align: center;
+
+  button,
+  p {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
     border: none;
-
-    input {
-      max-width: 50px;
-      border: none;
-      outline: none;
-    }
-
-    button {
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      border-radius: 50%;
-      border: none;
-      outline: none;
-    }
+    background: lightblue;
+    margin: 5px;
+    cursor: pointer;
   }
 }
 
@@ -97,8 +98,80 @@
     border-radius: 50px;
     border: none;
     outline: none;
-    cursor: pointer;&:hover {
+    cursor: pointer;
+
+    &:hover {
+      background: var(--primary-btn-hover);
+    }
+  }
+}
+
+@include small {
+  table {
+    th {
+      font-weight: 400;
+      opacity: 0.6;
+      font-size: 13px;
+      text-align: center;
+      padding: 5px;
+    }
+
+    th:nth-child(4) {
+      width: 50%;
+    }
+  }
+
+  .cart-table-quantity {
+    text-align: center;
+
+    button,
+    p {
+      width: 20px;
+      height: 20px;
+      margin: 5px auto;
+      border-radius: 50%;
+      line-height: 20px;
+      text-align: center;
+      display: block;
+      border: none;
+      background: lightblue;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  }
+
+
+
+  .cart-coupon-item {
+    width: 100%;
+    margin-top: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input {
+      padding: 10px;
+      max-width: 120px;
+      height: 30px;
+      border: 1px solid lightgray;
+      outline: none;
+      margin-right: 1rem;
+    }
+
+    button {
+      height: 30px;
+      width: 120px;
+      background: var(--primary-btn);
+      color: white;
+      border-radius: 50px;
+      font-size: 13px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      &:hover {
         background: var(--primary-btn-hover);
       }
+    }
   }
 }
