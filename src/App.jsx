@@ -5,19 +5,28 @@ import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import CartContext from "./Context/CartContext";
+import { useState } from "react";
 
 function App() {
+  const [cart, setCart] = useState([]);
+  
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </BrowserRouter>
+
+      <CartContext.Provider value={{ cart, setCart }}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </BrowserRouter>
+      </CartContext.Provider>
+
+
     </>
   );
 }

@@ -1,14 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./Animate.scss";
 
-export default function Animate({ children, dir, name }) {
+export default function Animate({ children, dir }) {
   const currRef = useRef();
 
   useEffect(() => {
     function scrollTrigger() {
       const para = currRef.current;
       const elem = para.getBoundingClientRect();
-
       const windowHeight = window.innerHeight;
 
       const minus = windowHeight - elem.top;
@@ -16,7 +15,13 @@ export default function Animate({ children, dir, name }) {
         para.classList.add(dir);
       }
     }
-    window.addEventListener("scroll", scrollTrigger);
+
+    window.onload = function () {
+
+      window.addEventListener("scroll", scrollTrigger);
+    }
+
+
   }, [children]);
   return (
     <div>

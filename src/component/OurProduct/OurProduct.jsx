@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./OurProduct.scss";
 import OurProductCard from "./OurProductCard";
+import productData from "../../product/product";
+
 
 export default function OurProduct() {
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    setProduct(productData);
+  }, [])
+
+
   return (
     <div className="our-product">
       <div className="our-product-title">
@@ -11,9 +20,18 @@ export default function OurProduct() {
       </div>
 
       <div className="our-product-cards">
-        <OurProductCard />
-        <OurProductCard />
-        <OurProductCard />
+        {
+          product && product.map((product, index) => {
+
+            if (index >= 1) {
+              return "";
+            }
+
+            return <OurProductCard product={product} key={index} />
+          })
+        }
+        {/* <OurProductCard />
+        <OurProductCard /> */}
       </div>
 
       <div className="load-more">

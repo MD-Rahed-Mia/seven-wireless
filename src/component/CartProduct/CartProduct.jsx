@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './CartProduct.scss';
 
 import { RiDeleteBack2Line } from "react-icons/ri";
+import CartContext from '../../Context/CartContext';
+
+
 
 export default function CartProduct() {
+
+  const cart = useContext(CartContext);
+
+
+
   return (
     <div className='cart-product-info'>
 
@@ -11,10 +19,11 @@ export default function CartProduct() {
       <div className="cart-product-item">
         <table>
           <thead>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Sub Total</th>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Sub Total</th></tr>
           </thead>
           <tbody>
             <tr>
