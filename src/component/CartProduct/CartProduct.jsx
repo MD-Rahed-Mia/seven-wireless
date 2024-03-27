@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './CartProduct.scss';
 
 import { RiDeleteBack2Line } from "react-icons/ri";
@@ -8,8 +8,50 @@ import CartContext from '../../Context/CartContext';
 
 export default function CartProduct() {
 
-  const cart = useContext(CartContext);
+  const [product, setProduct] = useState([]);
 
+  const { cart, setCart } = useContext(CartContext);
+
+  useEffect(() => {
+    setProduct(cart)
+  }, [cart])
+
+
+  //increase quantity of cart
+  function addQuantity(cartItem) {
+
+    const updateCart = cart.map((item) => {
+      if (item["product"]["id"] == cartItem["product"]["id"]) {
+        return { ...item, quantity: item.quantity + 1 }
+      } else {
+        return item;
+      }
+    })
+    localStorage.setItem("cart", JSON.stringify(updateCart));
+    setCart(updateCart);
+  }
+
+
+
+  //decrease quantity of cart
+  function decQuantity(cartItem) {
+
+    const updateCart = cart.map((item) => {
+      if (item["product"]["id"] == cartItem["product"]["id"]) {
+
+        if (item["quantity"] == 1) {
+          return { ...item, quantity: item.quantity }
+        }
+
+        return { ...item, quantity: item.quantity - 1 }
+      } else {
+        return item;
+      }
+    })
+    //update new quantity to cart
+    localStorage.setItem("cart", JSON.stringify(updateCart));
+    setCart(updateCart);
+  }
 
 
   return (
@@ -26,25 +68,30 @@ export default function CartProduct() {
               <th>Sub Total</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td className='cart-product-details'>
-                <div className='remove-cart-product'><RiDeleteBack2Line /></div>
-                <div>
 
-                  <img src="https://the7.io/elementor-product/wp-content/uploads/sites/111/2023/12/Mask-group-1-1-400x400.jpg" alt="" />
-                </div>
-                <div>
-                  <p>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-              </td>
-              <td className='cart-table-price'>$305</td>
-              <td className='cart-table-quantity'>
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
-              </td>
-              <td>$305</td>
-            </tr>
+            {
+              product && product.map((cartItem, index) => {
+                return (<tr key={index}>
+                  <td className='cart-product-details'>
+                    <div className='remove-cart-product'><RiDeleteBack2Line /></div>
+                    <div>
+
+                      <img src={cartItem["product"]["image"]} alt="" />
+                    </div>
+                    <div>
+                      <p>{cartItem["product"]["title"]}</p>
+                    </div>
+                  </td>
+                  <td className='cart-table-price'>${cartItem["product"]["price"]}</td>
+                  <td className='cart-table-quantity'>
+                    <button onClick={() => decQuantity(cartItem)}>-</button>
+                    <p>{cartItem.quantity}</p>
+                    <button onClick={() => addQuantity(cartItem)}>+</button>
+                  </td>
+                  <td>${cartItem["product"]["price"] * cartItem.quantity}</td>
+                </tr>)
+              })
+            }
           </tbody>
         </table>
       </div>

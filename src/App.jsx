@@ -6,11 +6,14 @@ import Cart from "./pages/Cart";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
 import CartContext from "./Context/CartContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [cart, setCart] = useState([]);
-  
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
+
+
+
+
   return (
     <>
 

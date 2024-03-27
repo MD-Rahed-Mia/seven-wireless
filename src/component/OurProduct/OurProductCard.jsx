@@ -3,11 +3,10 @@ import CartContext from "../../Context/CartContext";
 
 export default function OurProductCard({ product }) {
   const [quantity, setQuantity] = useState(1);
-
   const { cart, setCart } = useContext(CartContext);
 
   useEffect(() => {
-    console.log(cart);
+    localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
   //increase quantity of product
@@ -24,11 +23,26 @@ export default function OurProductCard({ product }) {
   }
 
 
+  //varify existing cart item
+  function varifyCart(id) {
+
+    const foundItem = cart.find(item => item.product.id === id);
+    return !!foundItem;
+
+  }
+
   //add product to cart
-  function addCart() {
-    setCart((prevCart) => {
-      return [...prevCart, { product, quantity }]
-    })
+  function addCart(id) {
+
+    if (varifyCart(id)) {
+      console.log("already is in cart");
+    }
+    else {
+      setCart((prevCart) => {
+        return [...prevCart, { product, quantity }]
+      });
+
+    }
   }
 
   return (
@@ -52,7 +66,7 @@ export default function OurProductCard({ product }) {
             <button onClick={increaseQuantity}>+</button>
           </div>
           <div className="product-card-cart-btn">
-            <button onClick={addCart}>add to cart</button>
+            <button onClick={() => addCart(product?.id)}>add to cart</button>
           </div>
         </div>
       </div>
